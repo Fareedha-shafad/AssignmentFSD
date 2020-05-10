@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        width: 140px;
+        display: inline-block;
+        color: brown;
+        font-weight: bold;
+    }
+   body{
+    background-color: cornsilk;
+    }
+    h4{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <h4>3. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.<hr></h4>
+
+            <p>Please enter some text </p>
+              <input type="text" name="txtChar2" id="txtChar2"  >
+              <label for="" id="result2"> </label>
+              
+              <button onclick="get_element2()"> Check  </button>
+    <script>
+      function get_element2(){
+
+var swapcase=function(letters){
+    var newletters="";
+    for (let i = 0; i < letters.length; i++) {
+        if(letters[i]===letters[i].toLowerCase()){
+            newletters+=letters[i].toUpperCase();
+        }else{
+            newletters+=letters[i].toLowerCase();
+               }
+        
+    }
+    return newletters;
+}
+//var text=document.getElementById('txtChar2').value;
+document.getElementById('result2').innerHTML=swapcase(document.getElementById('txtChar2').value);
+}
+    </script>
+</body>
+</html>
