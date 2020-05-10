@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  label{
+      width: 140px;
+      display: inline-block;
+      color: brown;
+      font-weight: bold;
+  }
+  #userinput,#idLength{
+  
+      border: 2px solid blue;
+  }
+  h4{
+      background-color: aqua;
+  }
+</style>
+<body>
+  <H4>6. Write a JavaScript function to truncate a string if it is longer than the specified number of characters.<HR></H4>
+        <p >Please enter your Text (max 10 character) :</p>
+          <input type="text" name="txtChar5" id="txtChar5" >
+          <label for="" id="result5"> </label>
+          
+          <button onclick="get_element5()"> TRUNGATE  </button>
+        
+      </div>
+    </div>
+  </div>
+</section>
+    <script>
+      function get_element5(){
+    var str=document.getElementById('txtChar5').value;
+    if(str.length>10){
+    var res=str.substring(0,10);
+    document.getElementById('result5').innerHTML=`${res} <BR>rest of yout text is not accepted<BR>`;
+    }else
+    document.getElementById('result5').innerHTML=`${str} `;
+}
+    </script>
+</body>
+</html>
