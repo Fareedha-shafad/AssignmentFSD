@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestionNo_2</title>
+</head>
+<style>
+    label{
+        width: 140px;
+        display: inline-block;
+        color: brown;
+        font-weight: bold;
+    }
+    #userinput,#idLength{
+    
+        border: 2px solid blue;
+    }
+    h4{
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <h4>2. Write a JavaScript program to find the most frequent item of an array<hr></h4>
+    <label >enter your array length</label>
+    <input type="text" id="idLength" />
+    <br>
+    <label id="ff">enter your array elments</label>
+    <input type="text" id="userinput" onkeypress="press()">
+    <br>
+    <input type ="button" onclick="addTo()" value="Add"  id="btn" hidden="true"/>
+    <input type ="button" onclick="mostOccr()" value="Most occured"  id="btn2" hidden="true"/>
+
+    <br>
+    <p id="ans"></p> 
+
+<script>
+ 
+        var arr = [];
+        var x=0;
+       
+        
+         function press()
+            {
+            var p=document.getElementById("btn2");
+            var q=document.getElementById("btn");
+            var r=document.getElementById("btn3");
+            
+             q.removeAttribute("hidden","true");
+             p.removeAttribute("hidden","true");
+    
+            }
+        
+        function addTo()
+         {
+            arr.push(document.getElementById("userinput").value.trim());
+            console.log(document.getElementById("idLength").value);
+            //console.log(arr[x]); 
+            if(x<=((document.getElementById("idLength").value)-1))
+           {
+            alert(x+1 +"element added");
+            x++;
+            document. getElementById("userinput").value="";
+            console.log(arr);
+            }
+         }
+         function mostOccr()
+         {
+         var m=0,mf=1,item;
+       
+                for(var j=0;j<arr.length;j++)
+                {
+                    for(k=j;k<arr.length;k++)
+                    {
+                        if (arr[j] == arr[k])
+                        m++;
+                         if (mf<m)
+                            {
+                             mf=m; 
+                            item = arr[j];
+                             }
+                    }
+                    m=0; 
+                }
+               document.getElementById("ans").innerHTML="Most occuerd element is "+'\t <b>'+item+" ( " +mf +'</b>'+" times ) ";
+              
+        }
+</script>        
+</body>
+</html>

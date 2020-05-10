@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_9</title>
+</head>
+<style>
+    h4{
+        background-color: aqua;
+    }
+    body{
+        text-align: center;
+        font-size: larger ;
+        font-weight: bolder;
+        color:red
+    }
+</style>
+<body >
+    <h4>9. Write a JavaScript program to print the letters of the word “Javascript” as below in each line using for…of.<hr></h4>
+ <script>
+
+//var inputArray = ['j','a','v','a','s','c','r','i','p','t'];
+
+// for(var i=0;i<inputArray.length;i++)
+// {
+//     for(var j=0;j<=i;j++)
+//     {
+//         document.write(inputArray[j]);
+//         document.write('\t');
+//     }
+//     document.write('<br>');
+// }
+
+const str='Javascript'.split('');
+let output='';
+for(let[index,value] of str.entries())
+{
+    for(let i=0;i<=index;i++)
+    {
+        output=`${str[i]}`;
+        document.write(output);
+    }
+    document.write('<br>');
+}
+
+ 
+    </script>
+</body>
+</html>

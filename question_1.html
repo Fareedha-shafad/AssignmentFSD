@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_1</title>
+</head>
+<style>
+    label{
+        width: 140px;
+        display: inline-block;
+        color: brown;
+        font-weight: bold;
+    }
+    #userinput,#idLength{
+    
+        border: 2px solid blue;
+    }
+    h4{
+        background-color: aqua;
+    }
+</style>
+
+<body>
+<h4>1. Write a JavaScript function to get an array and to read the first element of an array.
+    Check whether it is prime or not.<hr></h4>
+<label >enter your array length</label>
+<input type="text" id="idLength" />
+<br>
+
+<label id="ff">enter your array elments</label>
+<input type="text" id="userinput" onkeypress="press()">
+<br>
+<input type ="button" onclick="addTo()" value="Add"  id="btn" hidden="true"/>
+<input type ="button" onclick="show()" value="show"  id="btn2" hidden="true"/>
+<input type ="button" onclick="prime()" value="Prime"  id="btn3" hidden="true"/>
+<br>
+<p id="demo"></p>
+<script>
+ 
+var arr = [];
+var x=0;
+
+ function press()
+    {
+    var p=document.getElementById("btn2");
+    var q=document.getElementById("btn");
+    var r=document.getElementById("btn3");
+    
+     q.removeAttribute("hidden","true");
+     p.removeAttribute("hidden","true");
+     r.removeAttribute("hidden","true");
+    }
+
+function addTo()
+ {
+    arr.push(document.getElementById("userinput").value.trim());
+    console.log(document.getElementById("idLength").value);
+    //console.log(arr[x]); 
+    if(x<=((document.getElementById("idLength").value)-1))
+   {
+    alert(x+1 +" element added");
+    x++;
+    document. getElementById("userinput").value="";
+    console.log(arr);
+}
+ }
+ function show()
+ {
+     var t=document.getElementById("idLength").value;
+     for(let i=0;i<t;i++)
+     { 
+    document.getElementById("demo").innerHTML+=arr[i]+'<br/>'; 
+     }
+ }
+function prime() { 
+    var t=document.getElementById("idLength").value;
+    for(let j=0;j<t;j++)
+    {
+     var n, i, flag = true; 
+     n=arr[j];
+     n = parseInt(n) 
+    for(i = 2; i <= n - 1; i++) 
+     if (n % i == 0) 
+     { 
+         flag = false; 
+         break; 
+        } 
+                
+     if (flag == true) 
+      
+         document.write(n + " is prime"+" <br>");
+        else
+        
+         document.write(n + " is not prime"+" <br>");
+          } 
+}
+</script>
+</body>
+</html>
