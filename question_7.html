@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 7</title>
+</head>
+<style>
+button{
+        width: 140px;
+        display: inline-block;
+        color: brown;
+        font-weight: bold;
+    }
+    #userinput,#idLength{
+    
+        border: 2px solid blue;
+    }
+    h4{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <h4>7. Write a JavaScript program that accept two integers and display the larger using findLarge() function.<hr></h4>
+    <input type="text" id="no1">
+    <input type="text" id="no2">
+    <button onclick="check()">check</button>
+    <p id="demo"></p>
+
+    <script>
+        
+        function check() {
+            var str,str1;
+    str=parseInt(document.getElementById('no1').value);
+     str1=parseInt(document.getElementById('no2').value);
+    if(str > str1)
+    document.getElementById('demo').innerHTML=`${str} is the largest`;
+    else
+    document.getElementById('demo').innerHTML=`${str1} is the largest`;
+        }
+    </script>
+</body>
+</html>
