@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+</head>
+<style>
+  button,label{
+          width: 140px;
+          display: inline-block;
+          color: brown;
+          font-weight: bolder;
+      }
+      #userinput,#idLength{
+      
+          border: 2px solid blue;
+      }
+      h4{
+          background-color: aqua;
+      }
+  </style>
+<body>
+<h4>Write a JavaScript program using for…in to read the objects from an array entered by an user and to arrange it in alphabetical order<hr></h4>
+  
+        <p >Please enter some text :
+          <input type="text" id="txt" >
+          <label for="" id="result"></label>
+          
+          <button onclick="sort()"> Sort </button>
+       
+      <script>
+        function sort(){
+          str=document.getElementById('txt').value;
+    var res=str.split('').sort().join('');
+    document.getElementById('result').innerHTML=`${res} is in alphabetical order`;
+}
+        
+      </script>
+</script>
+</body>
+</html>
